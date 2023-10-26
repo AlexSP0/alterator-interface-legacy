@@ -1,4 +1,7 @@
 polkit.addRule(function(action, subject) {
+	if (action.id == "ru.basealt.alterator.legacy.Void") {
+        return polkit.Result.YES;
+    }	
 	if (action.id == "ru.basealt.alterator.legacy") {
         return polkit.Result.YES;
     }

@@ -28,8 +28,8 @@ install -v -p -m 644 -D legacy.backend %buildroot%{_datadir}/alterator/backends
 
 %files
 %{_datadir}/alterator/backends/legacy.backend
-%{_datadir}/dbus-1/interfaces/ru.basealt.alterator.applications.xml
-%{_sysconfdir}/polkit-1/rules.d/49-alterator-module-application.rules
+%{_datadir}/dbus-1/interfaces/ru.basealt.alterator.legacy.xml
+%{_sysconfdir}/polkit-1/rules.d/49-alterator-interface-legacy.rules
 
 %changelog
 * Thu Oct 24 2023 Kozyrev Yuri <kozyrevid@altlinux.org> 0.1.0-alt1
