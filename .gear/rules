@@ -1,2 +1,2 @@
-spec: .gear/alterator-interface-legacy.spec
+spec: alterator-interface-legacy.spec
 tar: .
