@@ -1,9 +1,0 @@
-[Manager]
-module_name = executor
-node_name = legacy
-
-interface_name = l
-
-[Void]
-execute = exit 0
-action_id = Void

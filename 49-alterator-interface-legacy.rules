@@ -1,5 +1,5 @@
 polkit.addRule(function(action, subject) {
-	if (action.id == "ru.basealt.alterator.legacy.Void") {
+	if (action.id == "ru.basealt.alterator.legacy.Info") {
         return polkit.Result.YES;
     }	
 	if (action.id == "ru.basealt.alterator.legacy") {
