@@ -7,7 +7,7 @@ Release: alt1
 Summary: Alterator browser legacy objects interface.
 License: GPLv2+
 Group: Other
-URL: https://github.com/AlexSP0/alterator-interface-legacy
+URL: https://gitlab.basealt.space/alt/alterator-interface-legacy
 
 BuildArch: noarch
 
@@ -22,14 +22,17 @@ Alterator browser legacy objects interface.
 %install
 mkdir -p %buildroot%_datadir/dbus-1/interfaces
 mkdir -p %buildroot%_sysconfdir/polkit-1/rules.d
+mkdir -p %buildroot%_sysconfdir/polkit-1/actions
 
 install -v -p -m 644 -D ru.basealt.alterator.legacy.xml %buildroot%_datadir/dbus-1/interfaces
-install -v -p -m 644 -D 49-alterator-interface-legacy.rules %buildroot%_sysconfdir/polkit-1/rules.d
+install -v -p -m 644 -D ru.basealt.alterator.legacy.policy %buildroot%_sysconfdir/polkit-1/actions
+#install -v -p -m 644 -D 49-alterator-interface-legacy.rules %buildroot%_sysconfdir/polkit-1/rules.d
 
 %files
 %_datadir/dbus-1/interfaces/ru.basealt.alterator.legacy.xml
-%_sysconfdir/polkit-1/rules.d/49-alterator-interface-legacy.rules
+%_sysconfdir/polkit-1/actions/ru.basealt.alterator.legacy.policy
+#%_sysconfdir/polkit-1/rules.d/49-alterator-interface-legacy.rules
 
 %changelog
-* Thu Oct 24 2023 Aleksey Saprunov <sav@altlinux.org> 0.1.0-alt1
+* Mon Dec 11 2023 Aleksey Saprunov <sav@altlinux.org> 0.1.0-alt1
 - initial build
