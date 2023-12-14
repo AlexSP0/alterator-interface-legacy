@@ -21,16 +21,16 @@ Alterator browser legacy objects interface.
 
 %install
 mkdir -p %buildroot%_datadir/dbus-1/interfaces
-mkdir -p %buildroot%_sysconfdir/polkit-1/rules.d
-mkdir -p %buildroot%_sysconfdir/polkit-1/actions
+#kdir -p %buildroot%_sysconfdir/polkit-1/rules.d
+mkdir -p %buildroot%_datadir/polkit-1/actions
 
 install -v -p -m 644 -D ru.basealt.alterator.legacy.xml %buildroot%_datadir/dbus-1/interfaces
-install -v -p -m 644 -D ru.basealt.alterator.legacy.policy %buildroot%_sysconfdir/polkit-1/actions
+install -v -p -m 644 -D ru.basealt.alterator.legacy.policy %buildroot%_datadir/polkit-1/actions
 #install -v -p -m 644 -D 49-alterator-interface-legacy.rules %buildroot%_sysconfdir/polkit-1/rules.d
 
 %files
 %_datadir/dbus-1/interfaces/ru.basealt.alterator.legacy.xml
-%_sysconfdir/polkit-1/actions/ru.basealt.alterator.legacy.policy
+%_datadir/polkit-1/actions/ru.basealt.alterator.legacy.policy
 #%_sysconfdir/polkit-1/rules.d/49-alterator-interface-legacy.rules
 
 %changelog
